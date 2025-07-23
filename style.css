@@ -1,0 +1,298 @@
+/* 
+ ========= Credits =========
+ color scheme from:
+ https://colorhunt.co/palette/2057814f959d98d2c0f6f8d5
+
+ =========== Font ==========
+ from https://www.dafont.com/vcr-osd-mono.font 
+*/
+/**/
+@font-face {
+    font-family: Ocean_Drive;
+    src: url(fonts/OceanDriveDemoRegular.ttf);
+}
+/**/
+
+/*
+ == Navigation formatting ==
+*/
+nav#internal {
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+}
+
+nav#internal>p {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    z-index: -5;
+    background-color: #C7FFEA;
+}
+
+.navbar {
+    padding: 0;
+    margin: auto;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-rows: 3em;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0px;
+    width: fit-content;
+    display: inline;
+    z-index: 100;
+}
+
+.navbar li>* {
+    color: #240750;
+    padding: 1em;
+    margin: 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #5FB3B1;
+    color: #F6F8D5;
+}
+
+#external {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-rows: 3.3em;
+    justify-content: space-evenly;
+}
+
+#external>button {
+    margin: 0px;
+    padding: 1em;
+    width: fit-content;
+    display: inline;
+    z-index: 100;
+    font-family: Pixel_Font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    transition-duration: 0.2s;
+    color: #240750;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#external>button:hover {
+    background-color: #5FB3B1;
+    color: #F6F8D5;
+}
+
+/*
+ ===== Everything else =====
+*/
+/* == Stuff for defaults == */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    background-color: #7AA7AE;
+    background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
+    height: 3000px;
+    width: 100%;
+}
+
+small {
+    color:#5FB3B1;
+}
+
+p>h1,
+p>h2,
+p>h3,
+p>h4 {
+    float: left;
+}
+
+html {
+    scroll-padding-top: 6em;
+    /* Adjust to your navbar height */
+}
+
+/* Selecting the first header on the page */
+body>header:first-child {
+    position: absolute;
+    background-color: #B4F3FF;
+    background-image: linear-gradient(#59D3FF, #B4F3FF, #FFFFFF);
+    text-align: center;
+    display: block;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    color: #240750;
+}
+
+/**/
+body>header:first-child>h1 {
+    font-family: Ocean_Drive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em;
+    margin: 1em;
+    padding: 0;
+    height: 1em;
+    vertical-align: middle;
+}
+
+body>header:first-child>p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    height: 6em;
+}
+
+.spacer1 {
+    font-family: Ocean_Drive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: -1;
+    height: 3em
+}
+
+.spacer3 {
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: -1;
+    height: 3em
+}
+
+main {
+    overflow: hidden;
+}
+
+main>* {
+    display: block;
+    align-self: auto;
+    margin: 10px 20px;
+    background-color: #C7FFEA;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+/* == Images === */
+/* For frames around images */
+.visual-frame {
+    text-align: center;
+    display: inline;
+    align-self: auto;
+    margin: 10px;
+    background-color:#3B6073;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.visual-frame>* {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* == Flexboxes ==*/
+/* superclasses for flex containers*/
+.rowflex {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reverserowflex {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.leftrowflex {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+/* == Specificity == */
+
+/* Float classes */
+.floatr {
+    float: right;
+}
+
+.floatl {
+    float: left;
+}
+
+.clearfloat {
+    clear: both;
+    overflow: auto;
+}
+
+
+/* === Media Queries === */
+/* Mobile Breakpoint */
+@media (max-width: 800px) {
+    /*
+    Change the flex box into a column 
+    instead of a row based on viewport
+    size
+    */
+    .flex {
+        flex-direction: column;
+    }
+
+    .navbar {
+        justify-content: center;
+        grid-template-columns: max-content max-content max-content max-content;
+        grid-template-rows: 3em;
+    }
+
+    #GDT>.subjects,
+    .subjects {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content max-content;
+        padding: 0;
+        margin: auto;
+        list-style-type: none;
+    }
+
+    /**/
+
+    #Secondary .subjects {
+        grid-template-columns: max-content max-content max-content max-content;
+        grid-template-rows: max-content max-content;
+    }
+
+    .timetable {
+        font-size: 80%;
+    }
+}
