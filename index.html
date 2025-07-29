@@ -3,32 +3,39 @@
     <head>
         <script src="main.js" defer></script>
         <link rel="stylesheet" href="style.css" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- get icons from https://www.favicon.cc -->
         <title> Index </title>
     </head>
 
     <body>
         <header>
             <h1> Fishing </h1>
-            <p></p>
+            <p class="media"></p>
         </header>
         <h1 class="spacer1"></h1>
 
         <nav id = "external">
-            <button id="history"> History of Fishing </a>
-            <button id="methods"> Methods of Fishing </a>
-            <button id="environ"> Environmental Impact </a>
+            <div>
+                <button id="history"> History of Fishing </button>
+                <button id="methods"> Methods of Fishing </button>
+                <button id="environ"> Environmental Impact </button>
+            </div>
         </nav>
-
+        
         <!-- Internal Nav bar -->
         <nav id = "internal">
+            <img id="internalHBMenu" alt="internal hamburger menu" src="images/ocean_hamburger_menu.png">
             <p></p>
             <ul class = "navbar" id="navbar1">
                 <li>
-                    <a href="#section1"> Early History </a>
+                    <a href="#earlyhistory"> Early History </a>
                 </li>
                 <li>
-                    <a href="#section2"> Industrial Revolution </a>
+                    <a href="#industrialrevolution"> Industrial Revolution </a>
                 </li>
                 <li>
                     <a href="#section3"> Modern Fisheries </a>
@@ -63,77 +70,112 @@
 
         <!-- Content -->
         <main>
-            <!-- Gaming Article -->
-            <div class="section rowflex section1">
-                <div class="visual-frame">
-                    <!--
-                    <img id ="sunrise" 
-                    src = "images/sunrise.jpg" 
-                    alt = "alt text" 
-                    title="title" width = "500">-->
-                    <small>caption</small>
-                </div>
-                <article>
-                    <h2>Early History</h2>
-                    <p>
-                        The earliest recorded instance of fishing practices dates back to the
-                        Upper Paleolithic period, some 40,000 years ago. At this point, humans
-                        began to fashion tools from bone and rock, and it's thought one of the
-                        first uses for these tools was to hunt down large fish. A dig at Daisy Cave,
-                        on San Miguel Island, uncovered fish hook made from bone about 8600-9600 years old.
+            <!-- History Article -->
+            <div class = "section section1">
+                <div class="rowflex" id ="earlyhistory">
+                    <div class="visual-frame">
+                        <img id ="fishhook" 
+                        src = "images/fishhook.jpg" 
+                        alt = "a picture of an Ivory Paleolithic Fishhook" 
+                        title="title">
+                        <small>Ivory fishhook from the Upper Palaeolithic, found at Wustermark 22 in north-eastern Germany</small>
+                    </div>
+                    <article>
+                        <h2>Early History</h2>
+                        <p>
+                            <h3>Upper Paleolithic</h3>
+                            Fishing is one of humanity's oldest practices. Artifacts from the Upper Paleolithic such as
+                            cave art, shell middens(a type of ancient waste pile), and the diet of the 40,000-year-old Tianyuan Man in China
+                            show that early humans relied heavily on fish and seafood. 
 
+                            At this point, humans began to fashion simple tools from bone and rock, 
+                            and it's thought one of the first uses for these tools was to hunt down large fish. 
+                            A dig at Daisy Cave, on San Miguel Island, uncovered bone fishhooks dating 8600-9600 years old.
+
+                            <br>
+                            <br>
+
+                            The spear, net, line and rod seem to have appeared almost simultaneously in Egypt around 3500 BCE. 
+                            Subsistence fishing changed little over the centuries and some techniques are still used today in recreational fishing in the West.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="revrowflex" id="industrialrevolution">
+                    <div class="visual-frame">
+                        <!--
+                        <img id ="sunrise" 
+                        src = "images/sunrise.jpg" 
+                        alt = "alt text" 
+                        title="title" width = "500">-->
+                        <small>caption</small>
+                    </div>
+                    <article>
+                        <h2>Industrial Revolution</h2>
+                        <p>
+                            Fish fossils found during archaeological digs appear to show that Homo habilis then Homo erectus were the first fishermen, some 500 000 years ago. However, fishing probably only really developed after the appearance of Homo sapiens during the Upper Paleolithic period between 40 000 and 10 000 years BCE. Very little is known about the different fishing practices. Subsistence fishing at that time consisted in catching fish by hand or by using rudimentary tools made from natural materials of which no trace remains. It would have been mainly practised by populations established near lakes and rivers. The spear, net, line and rod seem to have appeared almost simultaneously in Egypt around 3500 BCE. Subsistence fishing changed little over the centuries and some techniques are still used today in recreational fishing in the West.
+                        </p>
+                    </article>
+                </div>
+
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
                         <br>
                         <br>
-
-                        The spear, net, line and rod seem to have appeared almost simultaneously in Egypt around 3500 BCE. 
-                        Subsistence fishing changed little over the centuries and some techniques are still used today in recreational fishing in the West.
+                        <br>
+                        <a href="#top">Back to top</a>
                     </p>
-                </article>
-            </div>
-
-            <div class="section rowflex section1">
-                <div class="visual-frame">
-                    <!--
-                    <img id ="sunrise" 
-                    src = "images/sunrise.jpg" 
-                    alt = "alt text" 
-                    title="title" width = "500">-->
-                    <small>caption</small>
-                </div>
-                <article>
-                    <h2>Early History</h2>
-                    <p>
-                        Fish fossils found during archaeological digs appear to show that Homo habilis then Homo erectus were the first fishermen, some 500 000 years ago. However, fishing probably only really developed after the appearance of Homo sapiens during the Upper Paleolithic period between 40 000 and 10 000 years BCE. Very little is known about the different fishing practices. Subsistence fishing at that time consisted in catching fish by hand or by using rudimentary tools made from natural materials of which no trace remains. It would have been mainly practised by populations established near lakes and rivers. The spear, net, line and rod seem to have appeared almost simultaneously in Egypt around 3500 BCE. Subsistence fishing changed little over the centuries and some techniques are still used today in recreational fishing in the West.
-                    </p>
-                </article>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" id="mobileQR">
+                </footer>
             </div>
 
             <!-- Game Dev Article -->
-            <div class="section rowflex section2">
-                <article>
-                    <h2>Methods of Fishing</h2>
-                    <p>
-                    </p>
-                </article>
-                <div class="visual-frame">
-                    <small>Caption</small>
+            <div class = "section section2">
+                <div class="rowflex" id ="fishingmethods">
+                    <article>
+                        <h2>Methods of Fishing</h2>
+                        <p>
+                        </p>
+                    </article>
+                    <div class="visual-frame">
+                        <small>Caption</small>
+                    </div>
                 </div>
+
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
+                    </p>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" id="mobileQR">
+                </footer>
             </div>
 
             <!-- DnD Article -->
-            <div class="section rowflex section3">
-                <article>
-                    <h2>Environmental Impact</h2>
+            <div class = "section section3">
+                <div class="rowflex">
+                    <article>
+                        <h2>Environmental Impact</h2>
+                        <p>
+                        </p>
+                    </article>
+                </div>
+
+                <footer>
                     <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
                     </p>
-                </article>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" id="mobileQR">
+                </footer>
             </div>
-
-            <footer>
-                By Matthias Ung Flores<br>
-
-                <a href="#top">Back to top</a>
-            </footer>
         </main>
     </body>
 </html>

@@ -16,7 +16,7 @@
 /*
  == Navigation formatting ==
 */
-nav#internal {
+#internal {
     position: sticky;
     width: 100%;
     margin: 0;
@@ -25,9 +25,10 @@ nav#internal {
     top: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1em;
+    height: 3em;
 }
 
-nav#internal>p {
+#internal>p {
     margin: 0;
     position: absolute;
     width: 100%;
@@ -36,40 +37,47 @@ nav#internal>p {
     background-color: #C7FFEA;
 }
 
+#internal > *:first-child{
+    visibility: hidden;
+    display: none;
+}
+
 .navbar {
     padding: 0;
+    height:100%;
     margin: auto;
-    display: grid;
-    gap: 0px;
-    grid-template-columns: max-content max-content max-content max-content;
-    grid-template-rows: 3em;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .navbar li {
-    margin: 0px;
     width: fit-content;
-    display: inline;
+    height: 100%;
+    padding: 0px 10px;
+    display: block;
     z-index: 100;
 }
 
-.navbar li>* {
-    color: #240750;
+.navbar li > a{
+    display: inline-block;
     padding: 1em;
-    margin: 0px;
-    display: block;
+    color: #240750;
     text-align: center;
     text-decoration: none;
 }
 
-li a:hover {
+li:hover {
     background-color: #5FB3B1;
     color: #F6F8D5;
 }
 
-#external {
+#external{
     padding: 0px;
     margin: 0px;
+}
+#external > div{
+    overflow: scroll;
     display: grid;
     gap: 0px;
     grid-template-columns: max-content max-content max-content;
@@ -77,12 +85,12 @@ li a:hover {
     justify-content: space-evenly;
 }
 
-#external>button {
+#external button {
     margin: 0px;
     padding: 1em;
     width: fit-content;
     display: inline;
-    z-index: 100;
+    z-index: 0;
     font-family: Pixel_Font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1em;
     transition-duration: 0.2s;
@@ -95,7 +103,7 @@ li a:hover {
     text-decoration: none;
 }
 
-#external>button:hover {
+#external button:hover {
     background-color: #5FB3B1;
     color: #F6F8D5;
 }
@@ -103,12 +111,16 @@ li a:hover {
 /*
  ===== Everything else =====
 */
-/* == Stuff for defaults == */
+/* == General == */
+html{
+    height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     text-align: left;
-    height: auto;
+    height: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -116,12 +128,30 @@ body {
 main {
     background-color: #7AA7AE;
     background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
-    height: 3000px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section{
+    opacity:1;
+    position: absolute;
     width: 100%;
 }
 
-small {
-    color:#5FB3B1;
+.section.activeSection{
+    opacity: 1;
+    transform: translateX(0%);
+    animation: slideIn 0.375s;
+}
+
+.section > * {
+    display: block;
+    align-self: auto;
+    margin: 10px 20px;
+    background-color: #C7FFEA;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
 }
 
 p>h1,
@@ -131,9 +161,20 @@ p>h4 {
     float: left;
 }
 
+#internalHBMenu{
+    image-rendering: pixelated;
+    position: fixed;
+    top: 10px;
+    right:10px;
+    height: 39px;
+    width: 42px;
+    display: none;
+}
+
+/*  */
 html {
-    scroll-padding-top: 6em;
-    /* Adjust to your navbar height */
+    scroll-padding-top: 3em;
+    /* Adjust to navbar height */
 }
 
 /* Selecting the first header on the page */
@@ -184,21 +225,36 @@ body>header:first-child>p {
     height: 3em
 }
 
-main {
-    overflow: hidden;
+footer{
+    overflow: auto;
+    padding: 0;
 }
 
-main>* {
-    display: block;
-    align-self: auto;
-    margin: 10px 20px;
-    background-color: #C7FFEA;
-    padding: 5px;
-    padding-left: 10px;
-    border-radius: 10px;
+footer > *{
+    float: left;
+    margin: 10px;
 }
 
 /* == Images === */
+
+#mobileQR{
+    float: right;
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+}
+
+#fishhook{
+    width: 300px;
+    image-rendering: pixelated;
+    margin-bottom: 5px;
+}
+
+/* captions */
+small {
+    color:#5FB3B1;
+}
+
 /* For frames around images */
 .visual-frame {
     text-align: center;
@@ -216,7 +272,6 @@ main>* {
     text-align: center;
 }
 
-
 /* == Flexboxes ==*/
 /* superclasses for flex containers*/
 .rowflex {
@@ -226,22 +281,14 @@ main>* {
     justify-content: center;
 }
 
-.reverserowflex {
+.revrowflex {
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
 }
 
-.leftrowflex {
-    align-items: center;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-}
-
-/* == Specificity == */
-
+/* == General Classes == */
 /* Float classes */
 .floatr {
     float: right;
@@ -256,6 +303,18 @@ main>* {
     overflow: auto;
 }
 
+/* == animations == */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
 
 /* === Media Queries === */
 /* Mobile Breakpoint */
@@ -269,30 +328,60 @@ main>* {
         flex-direction: column;
     }
 
-    .navbar {
-        justify-content: center;
-        grid-template-columns: max-content max-content max-content max-content;
-        grid-template-rows: 3em;
+
+    #mobileQR{
+        display: none;
+    }
+    body>header:first-child>p {
+        height: 3em;
+    }
+    #internalHBMenu{
+        display: block;
     }
 
-    #GDT>.subjects,
-    .subjects {
-        display: grid;
-        grid-template-columns: max-content max-content;
-        grid-template-rows: max-content max-content;
-        padding: 0;
-        margin: auto;
-        list-style-type: none;
+    /* navbar stuff*/
+    .navbar{
+        flex-direction: column;
+        display: none;
+        justify-content:flex-start;
     }
 
-    /**/
-
-    #Secondary .subjects {
-        grid-template-columns: max-content max-content max-content max-content;
-        grid-template-rows: max-content max-content;
+    #internal {
+        position: fixed;
+        right: -250px;
+        overflow-x: hidden;
+        height: 100%;
+        width: 250px;
+        transition: right 1s ;
     }
 
-    .timetable {
-        font-size: 80%;
+    #internal > *:first-child{
+        display: none;
     }
+
+    #internal>p {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .navbar li {
+        height: fit-content;
+        width: 100%;
+        padding: 0px 10px;
+        display: block;
+        z-index: 100;
+    }
+
+    /*
+    .navbar li > a{
+        display: inline-block;
+        padding: 1em;
+        color: #240750;
+        text-align: center;
+        text-decoration: none;
+    }
+    */
+
+
 }
