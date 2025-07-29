@@ -123,13 +123,13 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 main {
     background-color: #7AA7AE;
     background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
     height: 100vh;
-    overflow: hidden;
 }
 
 .section{
