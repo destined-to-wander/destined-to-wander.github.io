@@ -37,11 +37,6 @@
     background-color: #C7FFEA;
 }
 
-#internal > *:first-child{
-    visibility: hidden;
-    display: none;
-}
-
 .navbar {
     padding: 0;
     height:100%;
@@ -75,9 +70,11 @@ li:hover {
 #external{
     padding: 0px;
     margin: 0px;
+    margin-top: 297px;
 }
+
 #external > div{
-    overflow: scroll;
+    overflow: auto;
     display: grid;
     gap: 0px;
     grid-template-columns: max-content max-content max-content;
@@ -123,24 +120,19 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
 }
 
 main {
+    padding-top: 10px;
     background-color: #7AA7AE;
     background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .section{
     opacity:1;
-    position: absolute;
     width: 100%;
-}
-
-.section.activeSection{
-    opacity: 1;
-    transform: translateX(0%);
     animation: slideIn 0.375s;
 }
 
@@ -152,13 +144,6 @@ main {
     padding: 5px;
     padding-left: 10px;
     border-radius: 10px;
-}
-
-p>h1,
-p>h2,
-p>h3,
-p>h4 {
-    float: left;
 }
 
 #internalHBMenu{
@@ -207,24 +192,6 @@ body>header:first-child>p {
     height: 6em;
 }
 
-.spacer1 {
-    font-family: Ocean_Drive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-    display: block;
-    z-index: -1;
-    height: 3em
-}
-
-.spacer3 {
-    margin: 0;
-    padding: 0;
-    display: block;
-    z-index: -1;
-    height: 3em
-}
-
 footer{
     overflow: auto;
     padding: 0;
@@ -237,7 +204,7 @@ footer > *{
 
 /* == Images === */
 
-#mobileQR{
+.mobileQR{
     float: right;
     width: 100px;
     height: 100px;
@@ -329,7 +296,7 @@ small {
     }
 
 
-    #mobileQR{
+    .mobileQR{
         display: none;
     }
     body>header:first-child>p {
@@ -340,6 +307,10 @@ small {
     }
 
     /* navbar stuff*/
+    #external{
+        margin-top: 245px;
+    }
+
     .navbar{
         flex-direction: column;
         display: none;
@@ -347,16 +318,13 @@ small {
     }
 
     #internal {
+        z-index: 100;
         position: fixed;
         right: -250px;
         overflow-x: hidden;
         height: 100%;
         width: 250px;
         transition: right 1s ;
-    }
-
-    #internal > *:first-child{
-        display: none;
     }
 
     #internal>p {

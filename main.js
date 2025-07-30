@@ -3,9 +3,9 @@ function showContent(contentID){
     for (let section of sections){
         if (section.classList.contains("section"+contentID)){
             section.style.display = "block";
-            section.classList.add("activeSection");
+            section.style.opacity = 1;
         } else {
-            section.classList.remove("activeSection");
+            section.style.opacity = 0;
             section.style.display = "none";
         }
     }
