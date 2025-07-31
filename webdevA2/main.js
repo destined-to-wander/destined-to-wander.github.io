@@ -48,7 +48,6 @@ document.getElementById("external").addEventListener("click",function(evt){
     } else if (evt.target.id == "environ") {
         displaySection(3);
     } else if (evt.target.id == "minigameNavButton") {
-        game = true;
         displaySection(4);
     }
 });
@@ -74,9 +73,7 @@ for (let section of sections){
 
 // ==== Game Code ====
 //boolean trigger for gamestart
-var gameActive = false;
 var score = 0;
-var totalObjects = 0;
 var timer = 1500;
 
 // Game Object Refernces
@@ -164,11 +161,6 @@ function gameStart(){
     gameAnimateID = setInterval(animate, 10);
     //scroll to center of  the canvas
     canvas.scrollIntoView({behavior:"instant", block:"center"});
-
-    if (window.matchMedia("(max-width: 800px)").matches){
-        //remove to prevent possibility of the menu overlapping the stop btn
-        hamBtn.style.display = "none";
-    }
 }
 function gameStop(){
     //reset timer
@@ -179,10 +171,6 @@ function gameStop(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //remove all objects
     objects.splice(0, objects.length);
-
-    if (window.matchMedia("(max-width: 800px)").matches){
-        hamBtn.style.display = "inline";
-    }
 }
 
 function spawnRandomObject() {
@@ -249,7 +237,7 @@ function animate() {
             let dx = object.x - spear.x;
             let dy = object.y - spear.y;
             //check distance to fish
-            if ((Math.abs(dx)**2 + Math.abs(dy)**2) < 100) {
+            if ( Math.pow(dx,2)+Math.pow(dy,2) < 100) {
                 // Remove fish and update score
                 objects.splice(i, 1);
                 i--;
@@ -298,5 +286,5 @@ function animate() {
     ctx.closePath(); 
     ctx.fill();
 
-    UpdateScoreBoard()
+    UpdateScoreBoard();
 }
