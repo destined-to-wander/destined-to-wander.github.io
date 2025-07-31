@@ -70,14 +70,14 @@ li:hover {
 #external{
     padding: 0px;
     margin: 0px;
-    margin-top: 297px;
+    margin-top: 379.2px;
 }
 
 #external > div{
     overflow: auto;
     display: grid;
     gap: 0px;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: max-content max-content max-content max-content;
     grid-template-rows: 3.3em;
     justify-content: space-evenly;
 }
@@ -98,6 +98,7 @@ li:hover {
     display: block;
     text-align: center;
     text-decoration: none;
+    justify-self: center;
 }
 
 #external button:hover {
@@ -126,13 +127,16 @@ main {
     padding-top: 10px;
     background-color: #7AA7AE;
     background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
 .section{
     opacity:1;
     width: 100%;
+}
+
+.slidein{
     animation: slideIn 0.375s;
 }
 
@@ -166,7 +170,7 @@ html {
 body>header:first-child {
     position: absolute;
     background-color: #B4F3FF;
-    background-image: linear-gradient(#59D3FF, #B4F3FF, #FFFFFF);
+    background-image: url("images/cloudbanner.jpg");
     text-align: center;
     display: block;
     width: 100%;
@@ -175,35 +179,34 @@ body>header:first-child {
     color: #240750;
 }
 
-/**/
+/* Title */
 body>header:first-child>h1 {
     font-family: Ocean_Drive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 4em;
-    margin: 1em;
+    font-size: 9em;
     padding: 0;
+    margin: 1em 0;
     height: 1em;
     vertical-align: middle;
 }
 
-body>header:first-child>p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.1em;
-    height: 6em;
-}
-
-footer{
+.section > footer{
     overflow: auto;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer > *{
-    float: left;
     margin: 10px;
 }
 
-/* == Images === */
+/* make the citation links easier to read */
+.citation{
+    color: white;
+}
 
+/* == Images === */
 .mobileQR{
     float: right;
     width: 100px;
@@ -212,28 +215,53 @@ footer > *{
 }
 
 #fishhook{
-    width: 300px;
-    image-rendering: pixelated;
-    margin-bottom: 5px;
+    width: 200px;
+}
+#fishingboats{
+    width: 500px;
+}
+#fishingweir{
+    width: 400px;
+}
+#spearfisher{
+    width: 350px;
+}
+#bottomtrawl{
+    width: 350px;
+}
+#sinkers{
+    width: 350px;
+}
+#codstocks{
+    width: 250px;
+}
+#fishfarm{
+    width: 500px;
 }
 
 /* captions */
 small {
-    color:#5FB3B1;
+    color:#83DDCD;
 }
 
 /* For frames around images */
 .visual-frame {
     text-align: center;
-    display: inline;
+    display: block;
     align-self: auto;
     margin: 10px;
     background-color:#3B6073;
     padding: 10px;
     border-radius: 10px;
 }
+.visual-frame > img {
+    margin-bottom: 5px;
+}
+.visual-frame > p {
+    width: 100%;
+}
 
-.visual-frame>* {
+.visual-frame > * {
     display: block;
     margin: auto;
     text-align: center;
@@ -241,7 +269,7 @@ small {
 
 /* == Flexboxes ==*/
 /* superclasses for flex containers*/
-.rowflex {
+.rowflex, .revrowflex, .colflex, .revcolflex {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -249,11 +277,16 @@ small {
 }
 
 .revrowflex {
-    align-items: center;
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
 }
+
+.colflex {
+    flex-direction: column;
+}
+.revcolflex {
+    flex-direction: column-reverse;
+}
+
 
 /* == General Classes == */
 /* Float classes */
@@ -270,7 +303,54 @@ small {
     overflow: auto;
 }
 
-/* == animations == */
+/* == Minigame formatting == */
+#minigameFrame{
+    display: block;
+    text-align: center;
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+    color: #83DDCD;
+    background-color:#3B6073;
+    border-radius: 10px;
+}
+.visual-frame > img {
+    margin-bottom: 5px;
+}
+.visual-frame > p {
+    width: 100%;
+}
+
+.visual-frame > * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#gameScreen{
+    margin: 5px;
+    background-image: url("images/reefbg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+td{
+    padding: 0;
+    margin: 0;
+}
+.startstopButton{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #26344A;
+    display: block;
+    width: 98px;
+    margin: auto;
+    padding: 15px 32px;
+}
+
+/* == Animations == */
 @keyframes slideIn {
     0% {
         opacity: 0;
@@ -286,13 +366,33 @@ small {
 /* === Media Queries === */
 /* Mobile Breakpoint */
 @media (max-width: 800px) {
+    /* resize the text to fit onscreen*/
+    body>header:first-child>h1{
+        font-size: 6em;
+    }
     /*
-    Change the flex box into a column 
-    instead of a row based on viewport
-    size
+    format the website as
+    columns instead of in rows
     */
-    .flex {
+    .rowflex {
         flex-direction: column;
+    }
+    .revrowflex {
+        flex-direction: column-reverse;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    /* Shrink the image size below a certain screen size */
+    #fishhook{
+        max-width: 300px;
+        width:100%;
+    }
+    #fishingboats{
+        max-width: 300px;
+        width:100%;
     }
 
 
@@ -308,7 +408,15 @@ small {
 
     /* navbar stuff*/
     #external{
-        margin-top: 245px;
+        margin-top: 192px;
+    }
+    #external button{
+        font-size: 0.7em;
+    }
+
+    #external > div{
+        grid-template-columns: max-content max-content;
+        grid-template-rows: 3em 3em;
     }
 
     .navbar{
@@ -324,7 +432,7 @@ small {
         overflow-x: hidden;
         height: 100%;
         width: 250px;
-        transition: right 1s ;
+        transition: right 0.75s ;
     }
 
     #internal>p {
@@ -340,16 +448,4 @@ small {
         display: block;
         z-index: 100;
     }
-
-    /*
-    .navbar li > a{
-        display: inline-block;
-        padding: 1em;
-        color: #240750;
-        text-align: center;
-        text-decoration: none;
-    }
-    */
-
-
 }
