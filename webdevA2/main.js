@@ -87,6 +87,9 @@ var baseSpawnRate = 200;
 var lastSpawn = 0;
 var objects = [];
 
+// audio object for fish kill
+const popAudio = new Audio("popsound.mp3");
+
 // spear
 var spear = {
     x: canvas.width / 2,
@@ -157,6 +160,9 @@ function UpdateScoreBoard(){
 var gameAnimateID;
 //continuously call animate
 function gameStart(){
+    score = 0;
+    timer = 1500;
+    UpdateScoreBoard()
     //start continuous animate calls
     gameAnimateID = setInterval(animate, 10);
     //scroll to center of  the canvas
@@ -242,6 +248,7 @@ function animate() {
                 objects.splice(i, 1);
                 i--;
                 score++;
+                popAudio.play();
                 continue;
             }
         // check out of bound
@@ -287,4 +294,8 @@ function animate() {
     ctx.fill();
 
     UpdateScoreBoard();
+
+    if (timer <= 0){
+        gameStop();
+    }
 }
