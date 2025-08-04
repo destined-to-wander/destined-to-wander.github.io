@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- prevent user-sizing to have consistent RWD -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- get icons from https://www.favicon.cc -->
+        <title> Index </title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="pagetitle"> Fishing </h1>
+        </header>
+
+        <!-- External Nav bar -->
+        <nav id = "external">
+            <div>
+                <button id="history"> History of Fishing </button>
+                <button id="methods"> Methods of Fishing </button>
+                <button id="environ"> Environmental Impact </button>
+                <button id="minigameNavButton"> Nice Day for Fishin' </button>
+            </div>
+        </nav>
+        
+        <!-- Internal Nav bar -->
+        <nav id = "internal">
+            <img id="internalHBMenu" alt="internal hamburger menu" src="images/ocean_hamburger_menu.png">
+            <p></p>
+            <ul class = "navbar" id="navbar1">
+                <li>
+                    <a href="#earlyhistory"> Early History </a>
+                </li>
+                <li>
+                    <a href="#europesection"> Europe Pre-15th Century</a>
+                </li>
+                <li>
+                    <a href="#deepseafishing"> Deep-sea Fishing </a>
+                </li>
+            </ul>
+            <ul class = "navbar" id="navbar2">
+                <li>
+                    <a href="#spearfishing"> Spearfishing </a>
+                </li>
+                <li>
+                    <a href="#tackle"> Fishing tackle </a>
+                </li>
+                <li>
+                    <a href="#trawl"> trawling </a>
+                </li>
+            </ul>
+            <ul class = "navbar" id="navbar3">
+                <li>
+                    <a href="#overfishing"> Overfishing </a>
+                </li>
+                <li>
+                    <a href="#bottomtrawling"> Bottom Trawling </a>
+                </li>
+                <li>
+                    <a href="#counter"> Countermeasures </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main>
+            <!-- History Section -->
+            <div class = "section section1">
+                <!-- flexbox to format image beside text -->
+                <div class="rowflex" id ="earlyhistory">
+                    <div class="visual-frame">
+                        <img id ="fishhook" 
+                        src = "images/fishhook.jpg" 
+                        alt = "a picture of an Ivory Paleolithic Fishhook" 
+                        title="In addition to fishooks, harpoons were also used for spearfishing">
+                        <small>Ivory fishhook from the Upper Palaeolithic, found at Wustermark 22 in north-eastern Germany</small>
+                    </div>
+                    <article>
+                        <h2>Early History</h2>
+                        <p>
+                            Fishing is one of humanity's oldest practices. Artifacts from the Upper Paleolithic such as
+                            cave art, shell middens(a type of ancient waste pile), and the diet of the 40,000-year-old Tianyuan Man in China
+                            show that early humans relied heavily on fish and seafood. 
+
+                            At this point, humans began to fashion simple tools from bone and rock, 
+                            and it's thought one of the first uses for these tools was to hunt down large fish. 
+                            A dig at Daisy Cave, on San Miguel Island, uncovered bone fishhooks dating 8600-9600 years old.
+
+                            <br>
+                            <br>
+
+                            The spear, net, line and rod seem to have appeared almost simultaneously in Egypt around 3500 BCE. 
+                            Subsistence fishing changed little over the centuries and some techniques are still used today in recreational fishing in the West.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="revrowflex" id="europesection">
+                    <div class="visual-frame">
+                        <img id ="fishingweir" 
+                        src = "images/fishingweir.png" 
+                        alt = "an image of a medieval fishing weir, " 
+                        title="A weir is a barrier constructed across a waterway, like a river or stream, to alter the flow of water." width = "500">
+                        <small>
+                            A reconstruction of a medieval fishing weir, an irish example close to the types found around the english coast
+                            <sup><a class="citation" href="#citation1">[1]</a></sup>
+                        </small>
+                    </div>
+                    <article>
+                        <h2>Fishing in Europe (circa 11th-15th century)</h2>
+                        <p>
+                            During the Middle Ages in Europe, feudal lords owned the rivers and lakes. 
+                            River fishing was strictly regulated and permitted for people in religious 
+                            communities whose diets were punctuated by periods of fasting. 
+                            However, from the middle of the 11th century, the construction of ponds developed, 
+                            heralding the beginning of fish farming.
+                            <br><br>
+                            From the 15th century, deep-sea fishing and the trade of fish expanded. 
+                            The Dutch formed fleets of herring drifters which pulled a long drift net and 
+                            could remain at sea for weeks at a time. They were supplied with provisions by 
+                            ventjagers (cargo boats) which also brought the catch back to shore.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="colflex" id="deepseafishing">
+                    <div class="visual-frame">
+                        <img id ="fishingboats" 
+                        src = "images/fishingboats.jpg" 
+                        alt = "drawn infographic of 17th century trawlers" 
+                        title="title" width = "500">
+                        <small>Fishing boats used in the 17th and 18th century</small>
+                    </div>
+                    <article>
+                        <h2>Deep-sea Fishing</h2>
+                        <p>
+                            Trawling first appeared in 17th century Britain, and expanded rapidly in the 
+                            19th century after the introduction steam power. Boats became bigger and more powerful, 
+                            enabling them to pull wide nets in deep water. The seafood trade intensified. 
+                            The small English town of Grimsby became one of the major centres of 
+                            commercial fishing in Europe and was connected by a direct railway line to 
+                            London's Billingsgate Fish Market (the world's biggest fish market at that time).
+                            <br><br>
+                            As for recreational fishing, in the 18th century fly fishing was initially 
+                            reserved for the wealthy classes. It gradually became more accessible as 
+                            technological advances meant better equipment could be produced relatively 
+                            cheaply. To satisfy anglers, non-native species were even introduced into 
+                            certain regions, as was the case with trout in Australia.
+                        </p>
+                    </article>
+                </div>
+
+                <div>
+                    <p id="citation1"> 1. Galloway, James A. "Fishing in medieval England." The sea in history: The medieval world/La Mer dans L'Histoire: le Moyen age (2017): 629-642.</p>
+                </div>
+
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
+                    </p>
+                    <p>
+                        Info taken from
+                        <a href="https://www.alimentarium.org/en/fact-sheet/history-fishing"> Alimentarium </a>
+                        <br>
+                        Fishing boat picture from 
+                        <a href="https://www.cwjefferys.ca/fishing-boats-17th-and-18th-centuries">CWJefferys</a>
+                    </p>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" class="mobileQR">
+                </footer>
+            </div>
+
+            <!-- Fishing equipment Section -->
+            <div class = "section section2">
+                <div class="rowflex" id ="spearfishing">
+                    <article>
+                        <h2>Spearfishing</h2>
+                        <p>
+                            The spears used in fishing have evolvedas time passed.
+                            Originally made from wood or cane, metal spears have become more commonplace.
+                            Modern spearfishing commonly uses spearguns for propulsion
+                            or Hawaiian slings as a simpler alternative. Divers often 
+                            wear two-piece camouflage wetsuits, weight belts or vests for 
+                            buoyancy control, and long fins designed for freediving efficiency. 
+                            A snorkel and low-volume mask are standard, while gloves offer 
+                            protection and warmth. Safety tools like knives or kill spikes 
+                            are carried to dispatch fish humanely or in emergencies. Buoys 
+                            and floatlines serve as both safety markers and tools for managing 
+                            large fish, often displaying diver-down flags to alert boats. Fish 
+                            stringers are used to store catches, and gear is often chosen for 
+                            portability, camouflage, and effectiveness in various underwater conditions.
+                        </p>
+                    </article>
+                    <div class="visual-frame">
+                        <img id ="spearfisher" 
+                        src = "images/spearfisherwcarp.jpg" 
+                        alt = "a US spearfisher holding out a common carp in 
+                        his right hand and a speargun in his left" 
+                        title="I have no idea where this comes from">
+                        <small>A common carp shot with a band-powered speargun by a diver using snorkelling gear, Minnesota, US</small>
+                    </div>
+                </div>
+
+                <div class="revrowflex" id ="tackle">
+                    <article>
+                        <h2>Fishing Tackle</h2>
+                        <p>
+                            Equipment used by anglers is commonly called fishing tackle, 
+                            and includes items like hooks, lines, rods, reels, sinkers, floats, nets, 
+                            lures, etc. Specific combinations of terminal tackle (tackle attached to the 
+                            end of a line, like a fishing hook, opposed to say, a rod) may be called rigs.
+                            <br><br>
+                            Originating from a 14th-century Dutch word, "tackle" is often used in 
+                            recreational contexts, as opposed to fishing gear, which 
+                            commonly refers to commercial equipment. Core components include hooks, 
+                            used since ancient times to catch fish by
+                            impalement or snagging; lines, evolving from plant-based in construction
+                            to modern synthetic fibers like nylon; and sinkers, which weigh down the 
+                            bait, originally made of lead but now replaced due to toxicity. Fishing 
+                            rods, used to cast and control lines, 
+                            come in many types and materials, with reels allowing precise deployment 
+                            and retrieval of line. Bait may be natural—like worms, insects, or fish—or 
+                            artificial, such as plastic lures or electronic attractants. Finally, bite 
+                            indicators like floats, quiver tips, or alarms help anglers detect fish 
+                            activity at the hook. These components together form the essential toolkit 
+                            for recreational fishing.
+                        </p>
+                    </article>
+                    <div class="visual-frame">
+                        <img id ="sinkers"
+                        src = "images/sinkers.jpg" 
+                        alt = "an image of 3 types of lead fishing sinkers" 
+                        title="lead sinkers are rare nowadays due to toxicity reasons">
+                        <small>Sinkers like the ones shown here are weights used when angling to force the lure or bait to sink more rapidly or to increase the distance that it may be cast.</small>
+                    </div>
+                </div>
+
+                <div class="rowflex" id ="trawl">
+                    <article>
+                        <h2>Trawling</h2>
+                        <p>
+                            Trawling is a commercial fishing method that involves dragging
+                            a funnel-shaped net, called a trawl, through the water behind
+                            one or more boats—referred to as trawlers or draggers. Trawlers 
+                            range from small vessels to large factory ships, and trawling
+                            can be done solo or cooperatively with two boats (pair 
+                            trawling). Unlike recreational trolling, which uses rods and
+                            lures, trawling employs large nets and is also used in
+                            scientific surveys. There are two main types: bottom trawling,
+                            which drags the net along the seafloor and can damage marine
+                            habitats and release pollutants, and midwater (or pelagic)
+                            trawling, which targets fish in the upper water column
+                            and has a lower environmental impact. While bottom
+                            trawling can contribute to habitat destruction and
+                            greenhouse gas emissions, newer gear aims to reduce contact with the seabed. Midwater trawling, often used to catch species like mackerel and herring, reduces bycatch but still risks capturing non-target fish. Trawl nets are kept open using trawl doors or paired vessels, with floats and weights controlling vertical positioning. Gear varies widely depending on target species and depth, and trawls can be modified for environmental monitoring or research.
+                        </p>
+                    </article>
+                    <div class="visual-frame">
+                        <img id ="bottomtrawl"
+                        src = "images/bottomtrawl.png" 
+                        alt = "diagram of a bottom trawling net" 
+                        title="title">
+                        <small>A diagram of how a bottom trawling net works</small>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
+                    </p>
+                    <p>
+                        <a href="https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-bottom-trawls">NOAA Fisheries</a>
+                    </p>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" class="mobileQR">
+                </footer>
+            </div>
+
+            <!-- Environemntal Impact Section -->
+            <div class = "section section3">
+                <div class="revrowflex" id ="overfishing">
+                    <div class="visual-frame">
+                        <img id ="codstocks"
+                        src = "images/codoverfishing.jpg" 
+                        alt = "an graph of atlantic cod stocks off the east coast of newfoundland" 
+                        title="title">
+                        <small>In the 1970-80s Atlantic cod stocks were severely overfished, leading to their abrupt 1992 collapse.</small>
+                    </div>
+                    <article>
+                        <h2>Overfishing</h2>
+                        <p>
+                            Overfishing is the excessive removal of fish from water bodies 
+                            faster than they can naturally replenish, leading to declining 
+                            populations, disrupted ecosystems, and long-term biodiversity 
+                            loss. It affects all types of water bodies and causes resource 
+                            depletion, reduced fish sizes, ecosystem imbalances, and even 
+                            species extinction, as seen in cases like the Atlantic cod collapse 
+                            and the extinction of the Chinese paddlefish. Driven by global demand, destructive fishing practices like bottom trawling and bycatch further exacerbate the damage. Overfishing reduces fishery productivity, threatens food security, and causes severe social and economic consequences, including the loss of billions in potential revenue. Mitigation involves regulation, sustainable practices, and raising consumer awareness, but continued overfishing remains a primary driver of oceanic species decline and ecosystem collapse worldwide.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="rowflex" id ="bottomtrawling">
+                    <article>
+                        <h2>Bottom Trawling</h2>
+                        <p>
+                            Bottom trawling causes significant environmental damage by physically disturbing the seafloor, overturning boulders, resuspending sediments, and leaving deep scars on the ocean bed. This repetitive activity degrades habitat quality, reduces biodiversity, and alters entire continental margins. Sensitive deep-sea organisms like corals are especially vulnerable, with 95% of seamount ecosystem damage attributed to trawling. Resuspended sediments from trawling introduce turbidity that affects light levels and kelp reproduction, remobilize toxins like PCBs and DDT into the food chain, and can create dead zones or harmful algal blooms. It also disrupts carbon and nutrient cycling, releasing an estimated 370 million tonnes of CO₂ annually, contributing to climate change. While some countries and regions have implemented trawling restrictions or bans, international waters largely lack regulation, making enforcement difficult. Despite efforts from nations like Palau and proposals for a global ban, a United Nations resolution failed to pass, leaving most of the ocean floor still vulnerable to this destructive practice.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="revcolflex" id ="counter">
+                    <div class="visual-frame">
+                        <img id ="fishfarm" 
+                        src = "images/fishfarm.jpg" 
+                        alt = "an image of a fishfarm" 
+                        title="Even though fish farming does not require a lot of space, they can have significant ecological impacts on the fish around them and marine resources.">
+                        <small>Fish farming, aquaculture, or pisciculture, has been proposed as a more sustainable alternative or as a supplement to the traditional capture of wild fish.</small>
+                    </div>
+                    <article>
+                        <h2>Countermeasures</h2>
+                        <p>
+                            Countermeasures against overfishing include fisheries management, aquaculture, and marine reserves. Effective management sets quotas, limits gear, and can use rights-based systems like ITQs to promote sustainability. Gear changes—like using circle hooks—reduce bycatch and habitat damage. Ecosystem-based management looks at whole ecosystems instead of single species. Aquaculture provides alternative seafood sources but poses risks like escapes and overuse of wild fish for feed. Marine reserves protect biodiversity by restricting fishing, helping ecosystems recover. While these methods show promise, stronger global enforcement and adoption are needed to reverse marine decline.
+                        </p>
+                    </article>
+                </div>
+
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
+                    </p>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" class="mobileQR">
+                </footer>
+            </div>
+
+            <!-- Minigame -->
+            <div class = "section section4">
+                <div class="revrowflex" id ="minigame">
+                    <div id="minigameFrame">
+                        <table>
+                            <tr>
+                                <td rowspan="2">
+                                    <button id="gameStopButton"  class="startstopButton">Stop</button>
+                                    <button id="gameStartButton" class="startstopButton">Start</button>
+                                </td>
+                                <td>
+                                    Click to shoot spear. Try to hit fish
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="scoreBoard">
+                                    Score: 0 <br> Time: 00:00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                <!-- set width and height here cuz of canvas' bitmap -->
+                                <canvas id="gameScreen" width="600" height="400">
+                                    <!-- only shows if the canvas is unsupported -->
+                                    Your browser does not support Canvases.
+                                </canvas>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <footer>
+                    <p>
+                        By Matthias Ung Flores<br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#top">Back to top</a>
+                    </p>
+                    <img src="images/fishing_site_qr.png" alt="qr-code to the mobile app" title="Scan to make the qr disappear" class="mobileQR">
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>
+
+
+<!--
+<div class="visual-frame">
+    <img id ="" 
+    src = "link" 
+    alt = "alt" 
+    title="title">
+    <small>Caption</small>
+</div>
+-->

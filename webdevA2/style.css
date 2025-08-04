@@ -1,0 +1,451 @@
+/* 
+ ========= Credits =========
+ color scheme from:
+ https://colorhunt.co/palette/2057814f959d98d2c0f6f8d5
+
+ =========== Font ==========
+ from https://www.dafont.com/vcr-osd-mono.font 
+*/
+/**/
+@font-face {
+    font-family: Ocean_Drive;
+    src: url(fonts/OceanDriveDemoRegular.ttf);
+}
+/**/
+
+/*
+ == Navigation formatting ==
+*/
+#internal {
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    height: 3em;
+}
+
+#internal>p {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 3em;
+    z-index: -5;
+    background-color: #C7FFEA;
+}
+
+.navbar {
+    padding: 0;
+    height:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar li {
+    width: fit-content;
+    height: 100%;
+    padding: 0px 10px;
+    display: block;
+    z-index: 100;
+}
+
+.navbar li > a{
+    display: inline-block;
+    padding: 1em;
+    color: #240750;
+    text-align: center;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: #5FB3B1;
+    color: #F6F8D5;
+}
+
+#external{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 379.2px;
+}
+
+#external > div{
+    overflow: auto;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: max-content max-content max-content max-content;
+    grid-template-rows: 3.3em;
+    justify-content: space-evenly;
+}
+
+#external button {
+    margin: 0px;
+    padding: 1em;
+    width: fit-content;
+    display: inline;
+    z-index: 0;
+    font-family: Pixel_Font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    transition-duration: 0.2s;
+    color: #240750;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    justify-self: center;
+}
+
+#external button:hover {
+    background-color: #5FB3B1;
+    color: #F6F8D5;
+}
+
+/*
+ ===== Everything else =====
+*/
+/* == General == */
+html{
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    padding-top: 10px;
+    background-color: #7AA7AE;
+    background-image: linear-gradient(#C7FFEA, #83DDCD, #5FB3B1, #3B6073, #26344A, #1C232E);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.section{
+    opacity:1;
+    width: 100%;
+}
+
+.slidein{
+    animation: slideIn 0.375s;
+}
+
+.section > * {
+    display: block;
+    align-self: auto;
+    margin: 10px 20px;
+    background-color: #C7FFEA;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#internalHBMenu{
+    image-rendering: pixelated;
+    position: fixed;
+    top: 10px;
+    right:10px;
+    height: 39px;
+    width: 42px;
+    display: none;
+}
+
+/*  */
+html {
+    scroll-padding-top: 3em;
+    /* Adjust to navbar height */
+}
+
+/* Selecting the first header on the page */
+body>header:first-child {
+    position: absolute;
+    background-color: #B4F3FF;
+    background-image: url("images/cloudbanner.jpg");
+    text-align: center;
+    display: block;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    color: #240750;
+}
+
+/* Title */
+body>header:first-child>h1 {
+    font-family: Ocean_Drive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 9em;
+    padding: 0;
+    margin: 1em 0;
+    height: 1em;
+    vertical-align: middle;
+}
+
+.section > footer{
+    overflow: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer > *{
+    margin: 10px;
+}
+
+/* make the citation links easier to read */
+.citation{
+    color: white;
+}
+
+/* == Images === */
+.mobileQR{
+    float: right;
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+}
+
+#fishhook{
+    width: 200px;
+}
+#fishingboats{
+    width: 500px;
+}
+#fishingweir{
+    width: 400px;
+}
+#spearfisher{
+    width: 350px;
+}
+#bottomtrawl{
+    width: 350px;
+}
+#sinkers{
+    width: 350px;
+}
+#codstocks{
+    width: 250px;
+}
+#fishfarm{
+    width: 500px;
+}
+
+/* captions */
+small {
+    color:#83DDCD;
+}
+
+/* For frames around images */
+.visual-frame {
+    text-align: center;
+    display: block;
+    align-self: auto;
+    margin: 10px;
+    background-color:#3B6073;
+    padding: 10px;
+    border-radius: 10px;
+}
+.visual-frame > img {
+    margin-bottom: 5px;
+}
+.visual-frame > p {
+    width: 100%;
+}
+
+.visual-frame > * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* == Flexboxes ==*/
+/* superclasses for flex containers*/
+.rowflex, .revrowflex, .colflex, .revcolflex {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.revrowflex {
+    flex-direction: row-reverse;
+}
+
+.colflex {
+    flex-direction: column;
+}
+.revcolflex {
+    flex-direction: column-reverse;
+}
+
+
+/* == General Classes == */
+/* Float classes */
+.floatr {
+    float: right;
+}
+
+.floatl {
+    float: left;
+}
+
+.clearfloat {
+    clear: both;
+    overflow: auto;
+}
+
+/* == Minigame formatting == */
+#minigameFrame{
+    display: block;
+    text-align: center;
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+    color: #83DDCD;
+    background-color:#3B6073;
+    border-radius: 10px;
+}
+.visual-frame > img {
+    margin-bottom: 5px;
+}
+.visual-frame > p {
+    width: 100%;
+}
+
+.visual-frame > * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#gameScreen{
+    margin: 5px;
+    background-image: url("images/reefbg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+td{
+    padding: 0;
+    margin: 0;
+}
+.startstopButton{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #26344A;
+    display: block;
+    width: 98px;
+    margin: auto;
+    padding: 15px 32px;
+}
+
+/* == Animations == */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* === Media Queries === */
+/* Mobile Breakpoint */
+@media (max-width: 800px) {
+    /* resize the text to fit onscreen*/
+    body>header:first-child>h1{
+        font-size: 6em;
+    }
+    /*
+    format the website as
+    columns instead of in rows
+    */
+    .rowflex {
+        flex-direction: column;
+    }
+    .revrowflex {
+        flex-direction: column-reverse;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    /* Shrink the image size below a certain screen size */
+    #fishhook{
+        max-width: 300px;
+        width:100%;
+    }
+    #fishingboats{
+        max-width: 300px;
+        width:100%;
+    }
+
+
+    .mobileQR{
+        display: none;
+    }
+    body>header:first-child>p {
+        height: 3em;
+    }
+    #internalHBMenu{
+        display: block;
+    }
+
+    /* navbar stuff*/
+    #external{
+        margin-top: 192px;
+    }
+    #external button{
+        font-size: 0.7em;
+    }
+
+    #external > div{
+        grid-template-columns: max-content max-content;
+        grid-template-rows: 3em 3em;
+    }
+
+    .navbar{
+        flex-direction: column;
+        display: none;
+        justify-content:flex-start;
+    }
+
+    #internal {
+        z-index: 100;
+        position: fixed;
+        right: -250px;
+        overflow-x: hidden;
+        height: 100%;
+        width: 250px;
+        transition: right 0.75s ;
+    }
+
+    #internal>p {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .navbar li {
+        height: fit-content;
+        width: 100%;
+        padding: 0px 10px;
+        display: block;
+        z-index: 100;
+    }
+}
