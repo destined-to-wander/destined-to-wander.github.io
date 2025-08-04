@@ -88,7 +88,7 @@ var lastSpawn = 0;
 var objects = [];
 
 // audio object for fish kill
-const popAudio = new Audio("popsound.mp3");
+const popAudio = new Audio("audio/popsound.mp3");
 
 // spear
 var spear = {
